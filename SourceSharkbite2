@@ -149,3 +149,12 @@ Section:NewButton("PartyBoat", "Chooses PartyBoat", function()
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
+
+Section:NewButton("MilitarySubmarine", "Chooses MilitarySubmarine", function()
+    local args = {
+		[1] = "MilitarySubmarine"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
