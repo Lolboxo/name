@@ -1,404 +1,151 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("SharkBite 2 FreeBoats V1", "Ocean")
 
-local ScreenGui = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local DuckyBoat = Instance.new("TextButton")
-local BlueWoodenMotorboat = Instance.new("TextButton")
-local UnicornBoat = Instance.new("TextButton")
-local Jetski = Instance.new("TextButton")
-local DuckyBoatBeta = Instance.new("TextButton")
-local Marlin = Instance.new("TextButton")
-local RedCanopyMotorboat = Instance.new("TextButton")
-local Catamaran = Instance.new("TextButton")
-local SmallWoodenSailboat = Instance.new("TextButton")
-local TubeBoat = Instance.new("TextButton")
-local Sloop = Instance.new("TextButton")
-local CombatBoat = Instance.new("TextButton")
-local FishingBoat = Instance.new("TextButton")
-local SmallDinghyMotorboat = Instance.new("TextButton")
-local Duckmarine = Instance.new("TextButton")
-local MilitarySubmarine = Instance.new("TextButton")
-local GingerbreadSteamBoat = Instance.new("TextButton")
-local Sleigh2022 = Instance.new("TextButton")
-local Snowmobile = Instance.new("TextButton")
---Properties:
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+--BoatsXMainFrame
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Boats")
 
-Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.new(1, 1, 1)
-Frame.Position = UDim2.new(0.329729736, 0, 0.262962967, 0)
-Frame.Size = UDim2.new(0, 522, 0, 541)
-Frame.Active = true
-Frame.Draggable = true
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.new(0.556863, 0.258824, 1)
-TextLabel.Size = UDim2.new(0, 522, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "SharkBite 2 Free Boats V1"
-TextLabel.TextColor3 = Color3.new(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14
-TextLabel.TextWrapped = true
-
-DuckyBoat.Name = "DuckyBoat"
-DuckyBoat.Parent = Frame
-DuckyBoat.BackgroundColor3 = Color3.new(1, 1, 1)
-DuckyBoat.Position = UDim2.new(0.0325670503, 0, 0.114836462, 0)
-DuckyBoat.Size = UDim2.new(0, 123, 0, 61)
-DuckyBoat.Font = Enum.Font.SourceSans
-DuckyBoat.Text = "DuckyBoat"
-DuckyBoat.TextColor3 = Color3.new(0, 0, 0)
-DuckyBoat.TextScaled = true
-DuckyBoat.TextSize = 14
-DuckyBoat.TextWrapped = true
-DuckyBoat.MouseButton1Down:connect(function()
-	local args = {
+Section:NewButton("DuckyBoat", "Chooses DuckyBoat", function()
+    local args = {
 		[1] = "DuckyBoat"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-BlueWoodenMotorboat.Name = "BlueWoodenMotorboat"
-BlueWoodenMotorboat.Parent = Frame
-BlueWoodenMotorboat.BackgroundColor3 = Color3.new(1, 1, 1)
-BlueWoodenMotorboat.Position = UDim2.new(0.0306513403, 0, 0.250783682, 0)
-BlueWoodenMotorboat.Size = UDim2.new(0, 123, 0, 61)
-BlueWoodenMotorboat.Font = Enum.Font.SourceSans
-BlueWoodenMotorboat.Text = "BlueWoodenMotorboat"
-BlueWoodenMotorboat.TextColor3 = Color3.new(0, 0, 0)
-BlueWoodenMotorboat.TextScaled = true
-BlueWoodenMotorboat.TextSize = 14
-BlueWoodenMotorboat.TextWrapped = true
-BlueWoodenMotorboat.MouseButton1Down:connect(function()
-	local args = {
+
+Section:NewButton("BlueWoodenMotorboat", "Chooses BlueWoodenMotorboat", function()
+    local args = {
 		[1] = "BlueWoodenMotorboat"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-UnicornBoat.Name = "UnicornBoat"
-UnicornBoat.Parent = Frame
-UnicornBoat.BackgroundColor3 = Color3.new(1, 1, 1)
-UnicornBoat.Position = UDim2.new(0.0344827585, 0, 0.383750409, 0)
-UnicornBoat.Size = UDim2.new(0, 123, 0, 61)
-UnicornBoat.Font = Enum.Font.SourceSans
-UnicornBoat.Text = "UnicornBoat"
-UnicornBoat.TextColor3 = Color3.new(0, 0, 0)
-UnicornBoat.TextScaled = true
-UnicornBoat.TextSize = 14
-UnicornBoat.TextWrapped = true
-UnicornBoat.MouseButton1Down:connect(function()
-	local args = {
-		[1] = "UnicornBoat"
-	}
 
-	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
-end)
-
-Jetski.Name = "Jetski"
-Jetski.Parent = Frame
-Jetski.BackgroundColor3 = Color3.new(1, 1, 1)
-Jetski.Position = UDim2.new(0.375478953, 0, 0.246143341, 0)
-Jetski.Size = UDim2.new(0, 123, 0, 61)
-Jetski.Font = Enum.Font.SourceSans
-Jetski.Text = "Jetski"
-Jetski.TextColor3 = Color3.new(0, 0, 0)
-Jetski.TextScaled = true
-Jetski.TextSize = 14
-Jetski.TextWrapped = true
-Jetski.MouseButton1Down:connect(function()
-	local args = {
+Section:NewButton("Jetski", "Chooses Jetski", function()
+    local args = {
 		[1] = "Jetski"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-DuckyBoatBeta.Name = "DuckyBoatBeta"
-DuckyBoatBeta.Parent = Frame
-DuckyBoatBeta.BackgroundColor3 = Color3.new(1, 1, 1)
-DuckyBoatBeta.Position = UDim2.new(0.379310369, 0, 0.383750409, 0)
-DuckyBoatBeta.Size = UDim2.new(0, 123, 0, 61)
-DuckyBoatBeta.Font = Enum.Font.SourceSans
-DuckyBoatBeta.Text = "DuckyBoatBeta"
-DuckyBoatBeta.TextColor3 = Color3.new(0, 0, 0)
-DuckyBoatBeta.TextScaled = true
-DuckyBoatBeta.TextSize = 14
-DuckyBoatBeta.TextWrapped = true
-DuckyBoatBeta.MouseButton1Down:connect(function()
-	local args = {
+
+Section:NewButton("DuckyBoatBeta", "Chooses DuckyBoatBeta", function()
+    local args = {
 		[1] = "DuckyBoatBeta"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-Marlin.Name = "Marlin"
-Marlin.Parent = Frame
-Marlin.BackgroundColor3 = Color3.new(1, 1, 1)
-Marlin.Position = UDim2.new(0.377394646, 0, 0.114836462, 0)
-Marlin.Size = UDim2.new(0, 123, 0, 61)
-Marlin.Font = Enum.Font.SourceSans
-Marlin.Text = "Marlin"
-Marlin.TextColor3 = Color3.new(0, 0, 0)
-Marlin.TextScaled = true
-Marlin.TextSize = 14
-Marlin.TextWrapped = true
-Marlin.MouseButton1Down:connect(function()
-	local args = {
+
+Section:NewButton("Marlin", "Chooses Marlin", function()
+    local args = {
 		[1] = "Marlin"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-RedCanopyMotorboat.Name = "RedCanopyMotorboat"
-RedCanopyMotorboat.Parent = Frame
-RedCanopyMotorboat.BackgroundColor3 = Color3.new(1, 1, 1)
-RedCanopyMotorboat.Position = UDim2.new(0.724137902, 0, 0.248232663, 0)
-RedCanopyMotorboat.Size = UDim2.new(0, 123, 0, 61)
-RedCanopyMotorboat.Font = Enum.Font.SourceSans
-RedCanopyMotorboat.Text = "RedCanopyMotorboat"
-RedCanopyMotorboat.TextColor3 = Color3.new(0, 0, 0)
-RedCanopyMotorboat.TextScaled = true
-RedCanopyMotorboat.TextSize = 14
-RedCanopyMotorboat.TextWrapped = true
-RedCanopyMotorboat.MouseButton1Down:connect(function()
-	local args = {
-		[1] = "RedCanopyMotorboat"
-	}
 
-	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
-end)
-
-Catamaran.Name = "Catamaran"
-Catamaran.Parent = Frame
-Catamaran.BackgroundColor3 = Color3.new(1, 1, 1)
-Catamaran.Position = UDim2.new(0.727969348, 0, 0.38119939, 0)
-Catamaran.Size = UDim2.new(0, 123, 0, 61)
-Catamaran.Font = Enum.Font.SourceSans
-Catamaran.Text = "Catamaran"
-Catamaran.TextColor3 = Color3.new(0, 0, 0)
-Catamaran.TextScaled = true
-Catamaran.TextSize = 14
-Catamaran.TextWrapped = true
-Catamaran.MouseButton1Down:connect(function()
-	local args = {
+Section:NewButton("Catamaran", "Chooses Catamaran", function()
+    local args = {
 		[1] = "Catamaran"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-SmallWoodenSailboat.Name = "SmallWoodenSailboat"
-SmallWoodenSailboat.Parent = Frame
-SmallWoodenSailboat.BackgroundColor3 = Color3.new(1, 1, 1)
-SmallWoodenSailboat.Position = UDim2.new(0.726053655, 0, 0.112285443, 0)
-SmallWoodenSailboat.Size = UDim2.new(0, 123, 0, 61)
-SmallWoodenSailboat.Font = Enum.Font.SourceSans
-SmallWoodenSailboat.Text = "SmallWoodenSailboat"
-SmallWoodenSailboat.TextColor3 = Color3.new(0, 0, 0)
-SmallWoodenSailboat.TextScaled = true
-SmallWoodenSailboat.TextSize = 14
-SmallWoodenSailboat.TextWrapped = true
-SmallWoodenSailboat.MouseButton1Down:connect(function()
-	local args = {
-		[1] = "SmallWoodenSailboat"
-	}
 
-	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
-end)
-
-TubeBoat.Name = "TubeBoat"
-TubeBoat.Parent = Frame
-TubeBoat.BackgroundColor3 = Color3.new(1, 1, 1)
-TubeBoat.Position = UDim2.new(0.379310369, 0, 0.520461023, 0)
-TubeBoat.Size = UDim2.new(0, 123, 0, 61)
-TubeBoat.Font = Enum.Font.SourceSans
-TubeBoat.Text = "TubeBoat"
-TubeBoat.TextColor3 = Color3.new(0, 0, 0)
-TubeBoat.TextScaled = true
-TubeBoat.TextSize = 14
-TubeBoat.TextWrapped = true
-TubeBoat.MouseButton1Down:connect(function()
-	local args = {
+Section:NewButton("TubeBoat", "Chooses TubeBoat", function()
+    local args = {
 		[1] = "TubeBoat"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-Sloop.Name = "Sloop"
-Sloop.Parent = Frame
-Sloop.BackgroundColor3 = Color3.new(1, 1, 1)
-Sloop.Position = UDim2.new(0.0344827585, 0, 0.520461023, 0)
-Sloop.Size = UDim2.new(0, 123, 0, 61)
-Sloop.Font = Enum.Font.SourceSans
-Sloop.Text = "Sloop"
-Sloop.TextColor3 = Color3.new(0, 0, 0)
-Sloop.TextScaled = true
-Sloop.TextSize = 14
-Sloop.TextWrapped = true
-Sloop.MouseButton1Down:connect(function()
-	local args = {
+
+Section:NewButton("Sloop", "Chooses Sloop", function()
+    local args = {
 		[1] = "Sloop"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-CombatBoat.Name = "CombatBoat"
-CombatBoat.Parent = Frame
-CombatBoat.BackgroundColor3 = Color3.new(1, 1, 1)
-CombatBoat.Position = UDim2.new(0.727969348, 0, 0.517909944, 0)
-CombatBoat.Size = UDim2.new(0, 123, 0, 61)
-CombatBoat.Font = Enum.Font.SourceSans
-CombatBoat.Text = "CombatBoat"
-CombatBoat.TextColor3 = Color3.new(0, 0, 0)
-CombatBoat.TextScaled = true
-CombatBoat.TextSize = 14
-CombatBoat.TextWrapped = true
-CombatBoat.MouseButton1Down:connect(function()
-	local args = {
+
+Section:NewButton("CombatBoat", "Chooses CombatBoat", function()
+    local args = {
 		[1] = "CombatBoat"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-FishingBoat.Name = "FishingBoat"
-FishingBoat.Parent = Frame
-FishingBoat.BackgroundColor3 = Color3.new(1, 1, 1)
-FishingBoat.Position = UDim2.new(0.37931034, 0, 0.659787059, 0)
-FishingBoat.Size = UDim2.new(0, 123, 0, 61)
-FishingBoat.Font = Enum.Font.SourceSans
-FishingBoat.Text = "FishingBoat"
-FishingBoat.TextColor3 = Color3.new(0, 0, 0)
-FishingBoat.TextScaled = true
-FishingBoat.TextSize = 14
-FishingBoat.TextWrapped = true
-FishingBoat.MouseButton1Down:connect(function()
-	local args = {
+
+Section:NewButton("FishingBoat", "Chooses FishingBoat", function()
+    local args = {
 		[1] = "FishingBoat"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-SmallDinghyMotorboat.Name = "SmallDinghyMotorboat"
-SmallDinghyMotorboat.Parent = Frame
-SmallDinghyMotorboat.BackgroundColor3 = Color3.new(1, 1, 1)
-SmallDinghyMotorboat.Position = UDim2.new(0.0344827585, 0, 0.659787059, 0)
-SmallDinghyMotorboat.Size = UDim2.new(0, 123, 0, 61)
-SmallDinghyMotorboat.Font = Enum.Font.SourceSans
-SmallDinghyMotorboat.Text = "SmallDinghyMotorboat"
-SmallDinghyMotorboat.TextColor3 = Color3.new(0, 0, 0)
-SmallDinghyMotorboat.TextScaled = true
-SmallDinghyMotorboat.TextSize = 14
-SmallDinghyMotorboat.TextWrapped = true
-SmallDinghyMotorboat.MouseButton1Down:connect(function()
-	local args = {
-		[1] = "SmallDinghyMotorboat"
-	}
 
-	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
-end)
-
-Duckmarine.Name = "Duckmarine"
-Duckmarine.Parent = Frame
-Duckmarine.BackgroundColor3 = Color3.new(1, 1, 1)
-Duckmarine.Position = UDim2.new(0.727969348, 0, 0.65723598, 0)
-Duckmarine.Size = UDim2.new(0, 123, 0, 61)
-Duckmarine.Font = Enum.Font.SourceSans
-Duckmarine.Text = "Duckmarine"
-Duckmarine.TextColor3 = Color3.new(0, 0, 0)
-Duckmarine.TextScaled = true
-Duckmarine.TextSize = 14
-Duckmarine.TextWrapped = true
-Duckmarine.MouseButton1Down:connect(function()
-	local args = {
+Section:NewButton("Duckmarine", "Chooses Duckmarine", function()
+    local args = {
 		[1] = "Duckmarine"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-MilitarySubmarine.Name = "MilitarySubmarine"
-MilitarySubmarine.Parent = Frame
-MilitarySubmarine.BackgroundColor3 = Color3.new(1, 1, 1)
-MilitarySubmarine.Position = UDim2.new(0.0344827585, 0, 0.795250475, 0)
-MilitarySubmarine.Size = UDim2.new(0, 123, 0, 61)
-MilitarySubmarine.Font = Enum.Font.SourceSans
-MilitarySubmarine.Text = "MilitarySubmarine"
-MilitarySubmarine.TextColor3 = Color3.new(0, 0, 0)
-MilitarySubmarine.TextScaled = true
-MilitarySubmarine.TextSize = 14
-MilitarySubmarine.TextWrapped = true
-MilitarySubmarine.MouseButton1Down:connect(function()
-	local args = {
-		[1] = "MilitarySubmarine"
-	}
 
-	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
-end)
-
-GingerbreadSteamBoat.Name = "GingerbreadSteamBoat"
-GingerbreadSteamBoat.Parent = Frame
-GingerbreadSteamBoat.BackgroundColor3 = Color3.new(1, 1, 1)
-GingerbreadSteamBoat.Position = UDim2.new(0.37931034, 0, 0.795250475, 0)
-GingerbreadSteamBoat.Size = UDim2.new(0, 123, 0, 61)
-GingerbreadSteamBoat.Font = Enum.Font.SourceSans
-GingerbreadSteamBoat.Text = "GingerbreadSteamBoat"
-GingerbreadSteamBoat.TextColor3 = Color3.new(0, 0, 0)
-GingerbreadSteamBoat.TextScaled = true
-GingerbreadSteamBoat.TextSize = 14
-GingerbreadSteamBoat.TextWrapped = true
-GingerbreadSteamBoat.MouseButton1Down:connect(function()
-	local args = {
+Section:NewButton("GingerbreadSteamBoat", "Chooses GingerbreadSteamBoat", function()
+    local args = {
 		[1] = "GingerbreadSteamBoat"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-Sleigh2022.Name = "Sleigh2022"
-Sleigh2022.Parent = Frame
-Sleigh2022.BackgroundColor3 = Color3.new(1, 1, 1)
-Sleigh2022.Position = UDim2.new(0.727969348, 0, 0.792699397, 0)
-Sleigh2022.Size = UDim2.new(0, 123, 0, 61)
-Sleigh2022.Font = Enum.Font.SourceSans
-Sleigh2022.Text = "Sleigh2022"
-Sleigh2022.TextColor3 = Color3.new(0, 0, 0)
-Sleigh2022.TextScaled = true
-Sleigh2022.TextSize = 14
-Sleigh2022.TextWrapped = true
-Sleigh2022.MouseButton1Down:connect(function()
-	local args = {
+
+Section:NewButton("SmallDinghyMotorboat", "Chooses SmallDinghyMotorboat", function()
+    local args = {
+		[1] = "SmallDinghyMotorboat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
+
+Section:NewButton("Sleigh2022", "Chooses Sleigh2022", function()
+    local args = {
 		[1] = "Sleigh2022"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
 
-Snowmobile.Name = "Snowmobile"
-Snowmobile.Parent = Frame
-Snowmobile.BackgroundColor3 = Color3.new(1, 1, 1)
-Snowmobile.Position = UDim2.new(0.111111112, 0, 0.923491716, 0)
-Snowmobile.Size = UDim2.new(0, 378, 0, 34)
-Snowmobile.Font = Enum.Font.SourceSans
-Snowmobile.Text = "Snowmobile"
-Snowmobile.TextColor3 = Color3.new(0, 0, 0)
-Snowmobile.TextScaled = true
-Snowmobile.TextSize = 14
-Snowmobile.TextWrapped = true
-Snowmobile.MouseButton1Down:connect(function()
-	local args = {
+
+Section:NewButton("Snowmobile", "Chooses Snowmobile", function()
+    local args = {
 		[1] = "Snowmobile"
 	}
 
 	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
 end)
+
+
+Section:NewButton("PartyBoat", "Chooses PartyBoat", function()
+    local args = {
+		[1] = "PartyBoat"
+	}
+
+	game:GetService("ReplicatedStorage").EventsFolder.BoatSelection.UpdateHostBoat:FireServer(unpack(args))
+end)
+
